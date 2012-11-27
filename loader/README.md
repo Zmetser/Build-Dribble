@@ -1,0 +1,1 @@
+Based on: http://dribbble.com/shots/781960-Loading-bar-PSD
