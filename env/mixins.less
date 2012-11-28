@@ -1,0 +1,37 @@
+.gradient (@origin, @start, @stop, @image) {
+    background-color: @start;
+    background-image: -webkit-linear-gradient(@origin, @start, @stop), url(@image);
+    background-image:    -moz-linear-gradient(@origin, @start, @stop), url(@image);
+    background-image:      -o-linear-gradient(@origin, @start, @stop), url(@image);
+    background-image:     -ms-linear-gradient(@origin, @start, @stop), url(@image);
+    background-image:         linear-gradient(@origin, @start, @stop), url(@image);
+}
+.gradient (@origin, @start, @stop) {
+    background-color: @start;
+    background-image: -webkit-linear-gradient(@origin, @start, @stop);
+    background-image:    -moz-linear-gradient(@origin, @start, @stop);
+    background-image:      -o-linear-gradient(@origin, @start, @stop);
+    background-image:     -ms-linear-gradient(@origin, @start, @stop);
+    background-image:         linear-gradient(@origin, @start, @stop);
+}
+
+.border-radius (@radius) {
+    -webkit-border-radius: @radius;
+       -moz-border-radius: @radius;
+        -ms-border-radius: @radius;
+         -o-border-radius: @radius;
+            border-radius: @radius;
+}
+
+.box-sizing (@value) {
+    -webkit-box-sizing: @value;
+       -moz-box-sizing: @value;
+        -ms-box-sizing: @value;
+            box-sizing: @value;
+}
+
+.box-shadow (@shadow) {
+  -webkit-box-shadow: @shadow;
+     -moz-box-shadow: @shadow;
+          box-shadow: @shadow;
+}

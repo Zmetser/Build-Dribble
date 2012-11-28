@@ -1,46 +1,14 @@
-.gradient (@origin, @image, @start, @stop) {
-    background-color: @start;
-    background-image: -webkit-linear-gradient(@origin, @start, @stop), url(@image);
-    background-image:    -moz-linear-gradient(@origin, @start, @stop), url(@image);
-    background-image:      -o-linear-gradient(@origin, @start, @stop), url(@image);
-    background-image:     -ms-linear-gradient(@origin, @start, @stop), url(@image);
-    background-image:         linear-gradient(@origin, @start, @stop), url(@image);
-}
-
-.border-radius (@radius) {
-    -webkit-border-radius: @radius;
-       -moz-border-radius: @radius;
-        -ms-border-radius: @radius;
-         -o-border-radius: @radius;
-            border-radius: @radius;
-}
-
-.box-sizing (@value) {
-    -webkit-box-sizing: @value;
-       -moz-box-sizing: @value;
-        -ms-box-sizing: @value;
-            box-sizing: @value;
-}
-
-.box-shadow (@shadow) {
-  -webkit-box-shadow: @shadow;
-     -moz-box-shadow: @shadow;
-          box-shadow: @shadow;
-}
+@import "../env/mixins.less";
+@import "../env/base.less";
 
 .ui-loader {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -25px 0 0 -450px;
-
     width: 900px;
     height: 50px;
     padding: 3px;
 
     .border-radius(25px);
     .box-sizing(border-box);
-    .gradient(top, 'texture.png', rgba(121,140,157,.9), rgba(189,204,219,.9));
+    .gradient(top, rgba(121,140,157,.9), rgba(189,204,219,.9), 'texture.png');
     .box-shadow(~"0 2px 0 rgba(255, 255, 255, .8)"
         ~", 0 2px 0 rgba(84, 92, 100, .8) inset"
         ~", 0 2px 8px #3e566c inset"
@@ -53,7 +21,7 @@
 
         .border-radius(35px);
         .box-sizing(border-box);
-        .gradient(top, 'texture.png', rgba(78,185,246,.9), rgba(61,162,220,.9));
+        .gradient(top, rgba(78,185,246,.9), rgba(61,162,220,.9), 'texture.png');
         .box-shadow(~"0 1px 4px rgba(255, 255, 255, .4) inset"
             ~", 0 -8px 10px rgba(29, 126, 182, .74) inset"
             ~", 0 0 10px rgba(26, 106, 152, .36) inset"
@@ -62,4 +30,10 @@
             ~", 0 -2px 4px rgba(30, 123, 176, .61) inset"
             ~", -3px 6px 4px rgba(255, 255, 255, .30) inset");
     }
+
+    /* Centerize */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -450px;
 }
